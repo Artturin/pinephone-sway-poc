@@ -1,14 +1,22 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 BACKLIGHT_FILE=~/.backlight
-BACKLIGHT_MIN=10
+#BACKLIGHT_MIN=10
 
 pptk-led set red 0
 pptk-led set green 0
 pptk-led set blue 0
 pptk-cpu-sleep disable
 
-# restore last saved backlight level
-BACKLIGHT=$((`cat $BACKLIGHT_FILE` >= $BACKLIGHT_MIN ? `cat $BACKLIGHT_FILE` : $BACKLIGHT_MIN))
-pptk-backlight set_percent $BACKLIGHT
 
+if [[ ! -s $BACKLIGHT_FILE ]]; then
+    BACKLIGHT=50
+else
+    BACKLIGHT=$(cat $BACKLIGHT_FILE)
+    if [[ $BACKLIGHT_NOW -lt 1 ]]; then
+        BACKLIGHT=50
+    fi
+fi
+# restore last saved backlight level
+#BACKLIGHT=$(($BACKLIGHT_NOW >= $BACKLIGHT_MIN ? $BACKLIGHT_NOW : $BACKLIGHT_MIN))
+pptk-backlight set_percent $BACKLIGHT
