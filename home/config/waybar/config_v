@@ -47,7 +47,7 @@
         "format": " {:%e %b %Y}", // Icon: calendar-alt
         //"tooltip-format": "{:%e %B %Y}"
         "tooltip": true,
-	"on-click": "termite -e swayphone_menuselect"
+	"on-click": "foot swayphone_menuselect"
     },
 
     "battery": {
@@ -134,7 +134,7 @@
           "warning": 70,
           "critical": 90
         },
-	"on-click": "termite -e \"htop --sort-key=PERCENT_CPU\""
+	"on-click": "foot \"htop --sort-key=PERCENT_CPU\""
     },
 
    
@@ -145,7 +145,7 @@
             "warning": 70,
             "critical": 90
         },
-	"on-click": "termite -e \"htop --sort-key=PERCENT_MEM\""
+	"on-click": "foot \"htop --sort-key=PERCENT_MEM\""
     },
 
     "network": {
@@ -154,7 +154,7 @@
         "format-ethernet": "  {ifname}", // Icon: ethernet
         "format-disconnected": "Disconnected",
         "tooltip-format": "{ifname}: {ipaddr}",
-	"on-click": "swaymsg exec \"termite -e nmtui\""
+	"on-click": "swaymsg exec \"foot nmtui\""
     },
 
     "pulseaudio": {
@@ -185,7 +185,7 @@
         "format": "{icon} {percent}% ",
         "states": [0,50],
         "format-icons": ["", ""],
-	"on-click": "termite -e swayphone_backlightselect"
+	"on-click": "foot swayphone_backlightselect"
     },
     "tray": {
         "icon-size": 22
