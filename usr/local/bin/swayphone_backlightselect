@@ -2,7 +2,7 @@
 
 BACKLIGHT=~/.backlight
 
-usleep 250000 # term stabilization 
+sleep 0.25 # term stabilization 
 
 DEFAULT=$(((`pptk-backlight get_percent`+5)/10*10))
 

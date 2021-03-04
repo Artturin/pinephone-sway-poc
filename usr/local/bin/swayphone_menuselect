@@ -16,7 +16,7 @@ then
 	echo '"sudo poweroff" Shutdown' >> $MENUOPTIONS
 fi
 
-usleep 250000 # term stabilization
+sleep 0.25 # term stabilization
 
 cat $MENUOPTIONS | xargs dialog --menu EXECUTE $HEIGHT $WIDTH $LINES  2>$MENUSELECT && swaymsg exec "`cat $MENUSELECT`"
 
