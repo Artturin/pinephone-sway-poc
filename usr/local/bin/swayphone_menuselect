@@ -9,11 +9,12 @@ LINES=0
 
 if [ ! -f $MENUOPTIONS ]
 then
-	echo 'foot Terminal' > $MENUOPTIONS
-	echo 'audacious "Music Player"' >> $MENUOPTIONS
-	echo 'firefox "Web Browser"' >> $MENUOPTIONS
-	echo '"sudo reboot" Restart' >> $MENUOPTIONS
-	echo '"sudo poweroff" Shutdown' >> $MENUOPTIONS
+	echo '"foot" "Terminal"' > $MENUOPTIONS
+	echo '"audacious" "Music Player"' >> $MENUOPTIONS
+	echo '"firefox" "Web Browser"' >> $MENUOPTIONS
+	echo '"systemctl suspend" "Suspend"' >> $MENUOPTIONS
+	echo '"systemctl poweroff" "Shutdown"' >> $MENUOPTIONS
+	echo '"systemctl reboot" "Restart"' >> $MENUOPTIONS
 fi
 
 sleep 0.25 # term stabilization
