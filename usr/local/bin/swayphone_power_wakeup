@@ -7,7 +7,7 @@ pptk-led set red 0
 pptk-led set green 0
 pptk-led set blue 0
 pptk-cpu-sleep disable
-swaymsg "output * dpms off"
+swaymsg "output * dpms on"
 
 #if [[ ! -s $BACKLIGHT_FILE ]]; then
 #    BACKLIGHT=50
