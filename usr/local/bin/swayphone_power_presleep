@@ -1,8 +1,8 @@
 #!/bin/bash
 
-pptk-led set red 0
-pptk-led set green 0
-pptk-led set blue 1
+#pptk-led set red 0
+#pptk-led set green 0
+#pptk-led set blue 1
 swaymsg "output * dpms off"
 #pptk-backlight set 0
 

@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
-BACKLIGHT_FILE=~/.backlight
+#BACKLIGHT_FILE=~/.backlight
 #BACKLIGHT_MIN=10
 
-pptk-led set red 0
-pptk-led set green 0
-pptk-led set blue 0
+#pptk-led set red 0
+#pptk-led set green 0
+#pptk-led set blue 0
 pptk-cpu-sleep disable
 swaymsg "output * dpms on"
 

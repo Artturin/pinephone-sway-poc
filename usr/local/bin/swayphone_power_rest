@@ -1,6 +1,6 @@
 #!/bin/bash
 
-pptk-led set green 1
+#pptk-led set green 1
 pptk-cpu-sleep enable
 #pptk-backlight set 0
 swaymsg "output * dpms off"
