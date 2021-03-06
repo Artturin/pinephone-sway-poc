@@ -7,16 +7,16 @@ pptk-led set red 0
 pptk-led set green 0
 pptk-led set blue 0
 pptk-cpu-sleep disable
+swaymsg "output * dpms off"
 
-
-if [[ ! -s $BACKLIGHT_FILE ]]; then
-    BACKLIGHT=50
-else
-    BACKLIGHT=$(cat $BACKLIGHT_FILE)
-    if [[ $BACKLIGHT_NOW -lt 1 ]]; then
-        BACKLIGHT=50
-    fi
-fi
-# restore last saved backlight level
-#BACKLIGHT=$(($BACKLIGHT_NOW >= $BACKLIGHT_MIN ? $BACKLIGHT_NOW : $BACKLIGHT_MIN))
-pptk-backlight set_percent $BACKLIGHT
+#if [[ ! -s $BACKLIGHT_FILE ]]; then
+#    BACKLIGHT=50
+#else
+#    BACKLIGHT=$(cat $BACKLIGHT_FILE)
+#    if [[ $BACKLIGHT_NOW -lt 1 ]]; then
+#        BACKLIGHT=50
+#    fi
+#fi
+## restore last saved backlight level
+##BACKLIGHT=$(($BACKLIGHT_NOW >= $BACKLIGHT_MIN ? $BACKLIGHT_NOW : $BACKLIGHT_MIN))
+#pptk-backlight set_percent $BACKLIGHT
