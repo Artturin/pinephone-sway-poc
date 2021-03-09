@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-#BACKLIGHT_FILE=~/.backlight
+BACKLIGHT_FILE=~/.backlight
 #BACKLIGHT_MIN=10
 
 #pptk-led set red 0
@@ -9,14 +9,14 @@
 pptk-cpu-sleep disable
 swaymsg "output * dpms on"
 
-#if [[ ! -s $BACKLIGHT_FILE ]]; then
-#    BACKLIGHT=50
-#else
-#    BACKLIGHT=$(cat $BACKLIGHT_FILE)
-#    if [[ $BACKLIGHT_NOW -lt 1 ]]; then
-#        BACKLIGHT=50
-#    fi
-#fi
-## restore last saved backlight level
-##BACKLIGHT=$(($BACKLIGHT_NOW >= $BACKLIGHT_MIN ? $BACKLIGHT_NOW : $BACKLIGHT_MIN))
-#pptk-backlight set_percent $BACKLIGHT
+if [[ ! -s $BACKLIGHT_FILE ]]; then
+    BACKLIGHT=50
+else
+    BACKLIGHT=$(cat $BACKLIGHT_FILE)
+    if [[ $BACKLIGHT_NOW -lt 1 ]]; then
+        BACKLIGHT=50
+    fi
+fi
+# restore last saved backlight level
+#BACKLIGHT=$(($BACKLIGHT_NOW >= $BACKLIGHT_MIN ? $BACKLIGHT_NOW : $BACKLIGHT_MIN))
+pptk-backlight set_percent $BACKLIGHT
