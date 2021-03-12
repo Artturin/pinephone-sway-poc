@@ -13,10 +13,9 @@ if [[ ! -s $BACKLIGHT_FILE ]]; then
     BACKLIGHT=50
 else
     BACKLIGHT=$(cat $BACKLIGHT_FILE)
-    if [[ $BACKLIGHT_NOW -lt 1 ]]; then
+    if [[ $BACKLIGHT -lt 1 ]]; then
         BACKLIGHT=50
     fi
 fi
 # restore last saved backlight level
-#BACKLIGHT=$(($BACKLIGHT_NOW >= $BACKLIGHT_MIN ? $BACKLIGHT_NOW : $BACKLIGHT_MIN))
 pptk-backlight set_percent $BACKLIGHT
