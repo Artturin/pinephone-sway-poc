@@ -4,5 +4,6 @@
 #pptk-led set green 0
 #pptk-led set blue 1
 swaymsg "output * dpms off"
+swaymsg input "1046:4097:Goodix_Capacitive_TouchScreen" events disabled
 #pptk-backlight set 0
 

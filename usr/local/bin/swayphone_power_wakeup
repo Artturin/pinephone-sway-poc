@@ -7,6 +7,7 @@ BACKLIGHT_FILE=~/.backlight
 #pptk-led set green 0
 #pptk-led set blue 0
 pptk-cpu-sleep disable
+swaymsg input "1046:4097:Goodix_Capacitive_TouchScreen" events enabled
 swaymsg "output * dpms on"
 
 if [[ ! -s $BACKLIGHT_FILE ]]; then
