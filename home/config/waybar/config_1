@@ -61,7 +61,7 @@
           "warning": 70,
           "critical": 90
         },
-	"on-click": "foot \"htop --sort-key=PERCENT_CPU\""
+	"on-click": "termite -e \"htop --sort-key=PERCENT_CPU\""
     },
 
    
@@ -72,7 +72,7 @@
             "warning": 70,
             "critical": 90
         },
-	"on-click": "foot \"htop --sort-key=PERCENT_MEM\""
+	"on-click": "termite -e \"htop --sort-key=PERCENT_MEM\""
     },
 
     "network": {
@@ -81,7 +81,7 @@
         "format-ethernet": "  {ifname}", // Icon: ethernet
         "format-disconnected": "Disconnected",
         "tooltip-format": "{ifname}: {ipaddr}",
-	"on-click": "swaymsg exec \"foot nmtui\""
+	"on-click": "swaymsg exec \"termite -e nmtui\""
     },
 
     "sway/mode": {
@@ -134,7 +134,7 @@
         "format": "{icon} {percent}% ",
         "states": [0,50],
         "format-icons": ["", ""],
-	"on-click": "foot swayphone_backlightselect"
+	"on-click": "termite -e swayphone_backlightselect"
     },
     "tray": {
         "icon-size": 22

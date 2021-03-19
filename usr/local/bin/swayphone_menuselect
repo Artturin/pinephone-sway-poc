@@ -9,7 +9,7 @@ LINES=0
 
 if [ ! -f $MENUOPTIONS ]
 then
-	echo '"foot" "Terminal"' > $MENUOPTIONS
+	echo '"termite" "Terminal"' > $MENUOPTIONS
 	echo '"audacious" "Music Player"' >> $MENUOPTIONS
 	echo '"firefox" "Web Browser"' >> $MENUOPTIONS
 	echo '"systemctl suspend" "Suspend"' >> $MENUOPTIONS
